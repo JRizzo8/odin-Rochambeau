@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script src="javascript.js" async></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Odin-Rochambeau</title>
 </head>
 <body>
-<script src="javascript.js"></script>
+    <header>
+        <h1>Rochambeau!</h1>
+    </header>
+    <div class="gameText">
+        <h1 id="primaryGameText">Welcome! Please choose your weapon of choice!</h1>
+        <p id="secondaryGameText">First one to 5 wins!</p>
+    </div>
+    <div class="scoreboard">
+        <div class="player">
+            <h1 class = "sign" id="playerSign">?</h1>
+            <p id="playerScore">Player Score: 0</p>
+        </div>
+        <div class="computer">
+            <h1 class="sign" id="computerSign">?</h1>
+            <p id="computerScore">Computer Score: 0</p>
+        </div>
+    </div>
+    <div class="btncontainer">
+        <button class="btn btnbox" id="rockbtn"><div class="sign">✊</div></button>     
+        <button class="btn btnbox" id="scsrbtn"><div class="sign">✌</div></button>
+        <button class="btn btnbox" id="pprbtn"><div class="sign">✋</div></button>
+    </div>
+    <footer>
+        Copyright &copy; John Rizzo 2025
+    </footer>
+    <div class ="modal" id="endGameModal">
+        <p id="modalText"></p>
+        <button class="btn btnbox" id="resetbtn">Play Again?</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
 </body>
 </html>

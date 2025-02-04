@@ -1,0 +1,138 @@
+:root{
+    --primary-light: #eee;
+    --primary-dark: #222831;
+    --secondary-dark: #393e46;
+    --secondary-dark-hover: #4a4f57;
+    --secondary-dark-active: #5b5f68;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    font-family: "roboto", sans-serif;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+button{
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+    /* background-color: var(--secondary-dark); */
+}
+header{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    
+}
+.player, .computer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.scoreboard h1 {
+    justify-self: center;
+    align-self: center;
+}
+.btncontainer{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+
+}
+.btn{
+    border-radius: 10px;
+    background-color: var(--secondary-dark);
+}
+.btnbox{
+    width: 160px;
+    height: 160px;
+}
+.sign{
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background-color: var(--secondary-dark-hover);
+}
+.btn:active{
+    background-color: var(--secondary-dark-active);
+}
+.gameText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.modal{
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--primary-dark);
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+.overlay.active{
+    display: block;
+}
+
+
+
+
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    color: var(--primary-light);
+    font-size: 20px;
+}
