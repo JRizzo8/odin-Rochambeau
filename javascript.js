@@ -141,7 +141,7 @@ function resetScoreDisplays(){
 function isGameOver(computerScore, playerScore){
     
     if (computerScore == 5 | playerScore == 5){
-        return true;
+        launchEndGameModal();
     }
     else {
         return false;
@@ -157,8 +157,8 @@ function launchEndGameModal(){
     }else if (playerScore == computerScore){
         modalText.textContent  = "You Tied";
     }
-    endGameModal.classList('active');
-    overlay.classList('active');
+    endGameModal.classList.add('active');
+    overlay.classList.add('active');
 }
 
 function closeEndGameModal(){
@@ -175,8 +175,8 @@ function resetGame(){
     resetChoices();
     playerScore = 0;
     computerScore = 0;
-    gameMainText = defaultMainText;
-    gameSecondaryText = defaultSecondaryText;
+    gameMainText.textContent = defaultMainText;
+    gameSecondaryText.textContent = defaultSecondaryText;
     closeEndGameModal();
 }
 
@@ -192,8 +192,4 @@ function playRound(btnId){
     resetChoices();
 
     isGameOver(computerScore, playerScore);
-    if (isGameOver){
-        console.log("game is over");
-        launchEndGameModal();
-    }
 }
